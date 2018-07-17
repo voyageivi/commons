@@ -6,7 +6,7 @@
 
     <groupId>com.afmobi</groupId>
     <artifactId>commons</artifactId>
-    <version>0.1.2</version>
+    <version>0.2.0</version>
     <build>
         <plugins>
             <plugin>
@@ -20,11 +20,6 @@
         </plugins>
     </build>
     <dependencies>
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>${freemarker.version}</version>
-        </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -52,7 +47,6 @@
 
     <properties>
         <jdk.version>1.7</jdk.version>
-        <freemarker.version>2.3.25-incubating</freemarker.version>
         <fastjson.version>1.1.41</fastjson.version>
         <guava.version>20.0</guava.version>
     </properties>
