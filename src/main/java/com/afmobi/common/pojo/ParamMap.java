@@ -1,7 +1,5 @@
 package com.afmobi.common.pojo;
 
-import java.util.HashMap;
-
 /**
  * ClassName:   ParamMap
  * Date:        2017-06-23 17:22
@@ -11,5 +9,9 @@ import java.util.HashMap;
 public class ParamMap extends ObjectMap{
     public static ParamMap newInstance(){
         return new ParamMap();
+    }
+    public ParamMap add(String key, Object value){
+        this.put(key,value);
+        return this;
     }
 }
