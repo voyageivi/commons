@@ -6,7 +6,7 @@
 
     <groupId>com.afmobi</groupId>
     <artifactId>commons</artifactId>
-    <version>0.2.5</version>
+    <version>0.2.6</version>
     <build>
         <plugins>
             <plugin>
@@ -47,6 +47,12 @@
             <!--<artifactId>validation-api</artifactId>-->
             <!--<version>1.0.0.GA</version>-->
         <!--</dependency>-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 

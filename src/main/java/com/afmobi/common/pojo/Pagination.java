@@ -35,7 +35,9 @@ public class Pagination {
      * @return the page
      */
     public Integer getPage() {
-        if (page == null) page = 1;
+        if (page == null) {
+            page = 1;
+        }
         return page;
     }
 
@@ -57,7 +59,9 @@ public class Pagination {
      * @return the pagesize
      */
     public Integer getPagesize() {
-        if (pagesize == null) pagesize = 15;
+        if (pagesize == null) {
+            pagesize = 15;
+        }
         return pagesize;
     }
 

@@ -1,6 +1,7 @@
 package com.afmobi.common.pojo;
 
 import io.swagger.annotations.ApiModel;
+import lombok.Data;
 
 /**
  * ClassName:   CodeDTO
@@ -9,6 +10,7 @@ import io.swagger.annotations.ApiModel;
  * @author Vincent
  */
 @ApiModel(value = "code", description = "数据返回code")
+@Data
 public class CodeDTO {
     String code;
     String desc;
@@ -19,23 +21,8 @@ public class CodeDTO {
         return rtn;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        setCode(String.valueOf(code));
-    }
-
     public void setCode(String code) {
         this.code = code;
     }
 
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
 }

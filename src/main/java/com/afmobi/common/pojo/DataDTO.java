@@ -1,7 +1,7 @@
 package com.afmobi.common.pojo;
 
-import com.alibaba.fastjson.JSON;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 /**
  * ClassName:   DataDTO
@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
  *
  * @author Vincent
  */
+@Data
 public class DataDTO<T> {
     @ApiModelProperty(notes = "响应码", example = "'200'")
     String code;
@@ -31,36 +32,8 @@ public class DataDTO<T> {
     }
 
 
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
     public void setCode(Integer code) {
         this.code = String.valueOf(code);
     }
 
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
-
-    @Override
-    public String toString() {
-        return JSON.toJSONString(this);
-    }
 }

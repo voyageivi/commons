@@ -1,6 +1,9 @@
 package com.afmobi.common.pojo;
 
 import com.google.common.collect.Lists;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import java.util.List;
 
@@ -9,25 +12,16 @@ import java.util.List;
  *
  * @author Vincent
  */
+@ApiModel("Page")
+@Data
 public class PageDTO<T> {
+    @ApiModelProperty("总数")
     int total;
+    @ApiModelProperty("行数据")
     List<T> rows;
 
-    /**
-     * @return the totle
-     */
-    public int getTotal() {
-        return total;
-    }
-
-    /**
-     * @param total the totle to set
-     */
-    public void setTotal(int total) {
-        this.total = total;
-    }
     public void setTotal(long total) {
-        this.total = (int)total;
+        this.total = (int) total;
     }
 
     /**
@@ -40,15 +34,9 @@ public class PageDTO<T> {
         return rows;
     }
 
-    /**
-     * @param rows the rows to set
-     */
-    public void setRows(List<T> rows) {
-        this.rows = rows;
-    }
 
-    public static <T> PageDTO<T> of(List<T> rows,int total){
-        PageDTO<T> rtn=new PageDTO<T>();
+    public static <T> PageDTO<T> of(List<T> rows, int total) {
+        PageDTO<T> rtn = new PageDTO<T>();
         rtn.setTotal(total);
         rtn.setRows(rows);
         return rtn;
