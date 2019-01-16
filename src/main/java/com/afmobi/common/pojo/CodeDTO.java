@@ -25,4 +25,8 @@ public class CodeDTO {
         this.code = code;
     }
 
+    public void setCode(int code) {
+        this.code = String.valueOf(code);
+    }
+
 }

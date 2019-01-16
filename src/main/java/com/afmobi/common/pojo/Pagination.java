@@ -8,7 +8,9 @@
  */
 package com.afmobi.common.pojo;
 
+import com.alibaba.fastjson.annotation.JSONType;
 import io.swagger.annotations.ApiParam;
+import lombok.Data;
 
 /**
  * ClassName:Pagination Date: 2016年12月26日 上午10:40:19
@@ -18,6 +20,8 @@ import io.swagger.annotations.ApiParam;
  * @author vincent
  * @see
  */
+@JSONType(ignores = "from")
+@Data
 public class Pagination {
     private static boolean isBaseZero = false;
     @ApiParam(name = "page", value = "页码", defaultValue = "1", example = "1")
@@ -41,12 +45,6 @@ public class Pagination {
         return page;
     }
 
-    /**
-     * @param page the page to set
-     */
-    public void setPage(Integer page) {
-        this.page = page;
-    }
 
     @ApiParam(hidden = true)
     public Integer getFrom() {
@@ -65,14 +63,4 @@ public class Pagination {
         return pagesize;
     }
 
-    /**
-     * @param pagesize the pagesize to set
-     */
-    public void setPagesize(Integer pagesize) {
-        this.pagesize = pagesize;
-    }
-
-    public void setRows(Integer pagesize) {
-        this.pagesize = pagesize;
-    }
 }

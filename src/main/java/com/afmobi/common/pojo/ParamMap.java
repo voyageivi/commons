@@ -6,12 +6,14 @@ package com.afmobi.common.pojo;
  *
  * @author Vincent
  */
-public class ParamMap extends ObjectMap{
-    public static ParamMap newInstance(){
+public class ParamMap extends ObjectMap {
+    public static ParamMap newInstance() {
         return new ParamMap();
     }
-    public ParamMap add(String key, Object value){
-        this.put(key,value);
+
+    @Override
+    public ParamMap add(String key, Object value) {
+        this.put(key, value);
         return this;
     }
 }

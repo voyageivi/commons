@@ -15,7 +15,7 @@ import java.util.List;
 @ApiModel("Page")
 @Data
 public class PageDTO<T> {
-    @ApiModelProperty("总数")
+    @ApiModelProperty(name = "总数",example = "10")
     int total;
     @ApiModelProperty("行数据")
     List<T> rows;
