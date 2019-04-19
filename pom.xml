@@ -6,7 +6,7 @@
 
     <groupId>com.afmobi</groupId>
     <artifactId>commons</artifactId>
-    <version>0.2.7</version>
+    <version>0.2.8</version>
     <build>
         <plugins>
             <plugin>
@@ -41,6 +41,7 @@
             <groupId>io.swagger</groupId>
             <artifactId>swagger-annotations</artifactId>
             <version>1.5.10</version>
+            <scope>provided</scope>
         </dependency>
         <!--<dependency>-->
             <!--<groupId>javax.validation</groupId>-->
