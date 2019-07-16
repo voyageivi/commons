@@ -6,7 +6,7 @@
 
     <groupId>com.afmobi</groupId>
     <artifactId>commons</artifactId>
-    <version>0.2.8</version>
+    <version>0.2.10</version>
     <build>
         <plugins>
             <plugin>

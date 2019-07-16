@@ -3,6 +3,8 @@ package com.afmobi.common.pojo;
 import io.swagger.annotations.ApiParam;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * ClassName:   KeyValueVO
  * Date:        2019-04-11 11:07
@@ -10,7 +12,7 @@ import lombok.Data;
  * @author Vincent
  */
 @Data
-public class KeyValueVO<T1, T2> {
+public class KeyValueVO<T1, T2> implements Serializable {
     @ApiParam("键")
     T1 key;
     @ApiParam("值")
