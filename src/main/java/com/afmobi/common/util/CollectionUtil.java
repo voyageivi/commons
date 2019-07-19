@@ -35,7 +35,9 @@ public class CollectionUtil {
     }
 
     public static <T> boolean contain(Collection<T> list, Predicate<T> predicate) {
-        if (isEmpty(list)) return false;
+        if (isEmpty(list)) {
+            return false;
+        }
         for (T o : list) {
             if (predicate.apply(o)) {
                 return true;
@@ -45,26 +47,36 @@ public class CollectionUtil {
     }
 
     public static <T> boolean contain(Collection<T> list, T obj) {
-        if (obj == null) return false;
+        if (obj == null) {
+            return false;
+        }
         return contain(list, Predicates.equalTo(obj));
     }
 
 
     public static <K, V> V match(Map<K, V> rtn, Predicate<K> p) {
-        if (isEmpty(rtn)) return null;
+        if (isEmpty(rtn)) {
+            return null;
+        }
         for (Map.Entry<K, V> entry : rtn.entrySet()) {
-            if (p.apply(entry.getKey())) return entry.getValue();
+            if (p.apply(entry.getKey())) {
+                return entry.getValue();
+            }
         }
         return null;
     }
 
     public static <T> List<T> distinct(List<T> arr, Function<T, String> keyFunc) {
-        if (isEmpty(arr)) return Lists.newArrayList();
+        if (isEmpty(arr)) {
+            return Lists.newArrayList();
+        }
         Set<String> keys = Sets.newHashSet();
         List<T> rtn = Lists.newArrayList();
         for (T t : arr) {
             String key = keyFunc.apply(t);
-            if (keys.contains(key)) continue;
+            if (keys.contains(key)) {
+                continue;
+            }
             rtn.add(t);
             keys.add(key);
         }
