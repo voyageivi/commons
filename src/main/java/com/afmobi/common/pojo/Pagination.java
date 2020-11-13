@@ -11,6 +11,7 @@ package com.afmobi.common.pojo;
 import com.alibaba.fastjson.annotation.JSONType;
 import io.swagger.annotations.ApiParam;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * ClassName:Pagination Date: 2016年12月26日 上午10:40:19
@@ -20,6 +21,7 @@ import lombok.Data;
  * @author vincent
  * @see
  */
+@NoArgsConstructor
 @JSONType(ignores = "from")
 @Data
 public class Pagination {
@@ -62,5 +64,13 @@ public class Pagination {
         }
         return pagesize;
     }
+
+    public static Pagination of(Integer page, Integer pagesize) {
+        Pagination rtn = new Pagination();
+        rtn.setPage(page);
+        rtn.setPagesize(pagesize);
+        return rtn;
+    }
+
 
 }

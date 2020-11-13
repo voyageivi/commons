@@ -58,10 +58,30 @@ public class MathUtil {
         }
         return round(100.0 * x.doubleValue() / y.doubleValue(), len);
     }
+
     public static Double percent(Number x, Number y) {
         if (x == null || y == null || y.doubleValue() == 0) {
             return null;
         }
-        return round(100.0 * x.doubleValue() / y.doubleValue(), 1);
+        return round(100.0 * x.doubleValue() / y.doubleValue(), 2);
+    }
+
+    public static Double avg(Number x, Number y, Integer len) {
+        return div(x, y, len);
+    }
+
+    public static Double avg(Number x, Number y) {
+        return div(x, y);
+    }
+
+    public static Double div(Number x, Number y) {
+        return div(x, y, 2);
+    }
+
+    public static Double div(Number x, Number y, Integer len) {
+        if (x == null || y == null || y.doubleValue() == 0) {
+            return null;
+        }
+        return round(1.0 * x.doubleValue() / y.doubleValue(), len);
     }
 }
